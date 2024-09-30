@@ -1,0 +1,168 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('http://localhost/por/comp/im/12.jpg') no-repeat center center fixed;
+    background-size: cover;
+    /* ปรับขนาดภาพให้เต็มหน้าจอ */
+    text-align: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.3);
+    z-index: 1;
+}
+
+/* รูปแบบของหัวข้อหลัก */
+h1 {
+    text-align: center;
+    color: #010911;
+    margin: 20px;
+    font-size: 6vw;
+    /* ใช้หน่วยที่ปรับตามขนาดหน้าจอ */
+}
+
+/* รูปแบบของเนื้อหาหลัก */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+
+.content a {
+    display: block;
+    width: 80%;
+    max-width: 90%;
+    margin: 10px 0;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 20px;
+    border: 3px solid rgb(0 0 0 / 32%);
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    font-size: vw;
+    font-weight: bold;
+
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
+}
+
+.content a:hover {
+    opacity: 0.9;
+    color: #0b0a0a;
+    background-color: #f1f2f9;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* สีสำหรับแต่ละหมวดหมู่ */
+.normal {
+    background-color: #dc3545;
+    /* สีแดงสำหรับเหตุุด่วนเหตุร้าย */
+}
+
+.med {
+    background-color: #ffc107;
+    /* สีเหลืองสำหรับฉุกเฉินด้านการแพทย์ */
+}
+
+.transport {
+    background-color: #17a2b8;
+    /* สีฟ้าสำหรับการคมนาคม */
+}
+
+.Utilities {
+    background-color: #28a745;
+    /* สีเขียวสำหรับสาธารณูปโภค */
+}
+
+/* รูปแบบของปุ่มปิดหน้าเว็บ */
+/* รูปแบบของปุ่มปิดหน้าเว็บ */
+.close-button {
+    display: block;
+    width: 20%;
+    /* ลดความกว้างเพื่อให้ปุ่มเล็กลง */
+    max-width: 100vw;
+    /* ลดความกว้างสูงสุดเพื่อให้ปุ่มเล็กลง */
+    margin: 40px auto;
+    /* ลดระยะห่างด้านบนและด้านล่าง */
+    padding: 1vw;
+    /* ลดการเติมให้ปุ่มดูเล็กลง */
+    border: none;
+    border-radius: 20px;
+    /* เพิ่มความโค้งมนของขอบ */
+    background-color: #333;
+    color: #fff;
+    font-size: 0.1px;
+    /* ลดขนาดตัวอักษร */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.close-button:hover {
+    background-color: #6a6a6a;
+}
+
+.close-button:active {
+    transform: scale(0.95);
+}
+
+
+
+
+
+
+/* รูปแบบของข้อความคำแนะนำ */
+#close-instruction {
+    text-align: center;
+    font-size: 3vw;
+    /* ใช้หน่วยที่ปรับตามขนาดหน้าจอ */
+}
+
+
+
+
+
+
+
+
+
+/* Media Queries สำหรับขนาดหน้าจอเล็ก */
+@media (max-width: 768px) {
+    .content a {
+        font-size: 5vw;
+    }
+
+    .close-button {
+        font-size: 5vw;
+    }
+
+    #close-instruction {
+        font-size: 4vw;
+    }
+}
+
+/* Media Queries สำหรับขนาดหน้าจอมือถือ */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 8vw;
+    }
+
+    .content a {
+        font-size: 6vw;
+    }
+
+    .close-button {
+        font-size: 6vw;
+    }
+
+    #close-instruction {
+        font-size: 5vw;
+    }
+}

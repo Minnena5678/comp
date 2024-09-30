@@ -1,0 +1,203 @@
+body {
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    color: #333;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    background: url('http://localhost/por/comp/im/12.jpg') no-repeat center center fixed;
+    background-size: cover;
+    /* ปรับขนาดภาพให้เต็มหน้าจอ */
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    font-size: 3em;
+    /* ขนาดข้อความเล็กลง */
+    color: #0b3d91;
+    text-align: center;
+    margin: 30px 0;
+    /* ลดระยะห่าง */
+    max-width: 90%;
+    position: relative;
+    padding: 0 10px;
+    /* ลดพื้นที่รอบๆ ข้อความ */
+    font-weight: 700;
+    /* ทำให้ข้อความหนาขึ้น */
+    line-height: 1.2;
+    /* เพิ่มความสูงบรรทัด */
+    border-radius: 10px;
+    /* เพิ่มความโค้งให้กับพื้นหลัง */
+}
+
+h1::before,
+h1::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    /* ขนาดเล็กลง */
+    height: 4px;
+    /* ขนาดเล็กลง */
+    background-color: #0b3d91;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+h1::before {
+    left: -60px;
+    /* ปรับตำแหน่ง */
+}
+
+h1::after {
+    right: -50px;
+    /* ปรับตำแหน่ง */
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    /* ลดระยะห่าง */
+}
+
+.contact-card {
+    background: #ffffff;
+    border-radius: 10px;
+    /* ขนาดเล็กลง */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    padding: 15px;
+    /* ขนาดเล็กลง */
+    width: 220px;
+    /* ขนาดเล็กลง */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.phone-number {
+    font-size: 1.5em;
+    /* ขนาดเล็กลง */
+    font-weight: bold;
+    color: #e63946;
+    margin-bottom: 8px;
+    /* ลดระยะห่าง */
+    width: 100%;
+}
+
+.agency-name {
+    font-size: 1.2em;
+    /* ขนาดเล็กลง */
+    color: #0b3d91;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.name {
+    font-size: 0.8em;
+    /* ขนาดเล็กลง */
+    color: #555;
+    margin-bottom: 8px;
+    /* ลดระยะห่าง */
+    width: 100%;
+}
+
+.call-button {
+    padding: 4px 8px;
+    /* ขนาดเล็กลง */
+    background-color: #1d3557;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    /* ปรับให้โค้งมนขึ้น */
+    width: 100%;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.call-button:hover {
+    background-color: #457b9d;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* สไตล์สำหรับปุ่มย้อนกลับ */
+.close-button {
+    padding: 8px 16px;
+    /* ขนาดเล็กลง */
+    background: #e63946;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    /* ปรับให้โค้งมนขึ้น */
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    margin-top: 15px;
+    /* ลดระยะห่าง */
+    position: relative;
+    overflow: hidden;
+}
+
+.close-button:hover {
+    background: #d62828;
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8em;
+        /* ปรับขนาดเมื่อหน้าจอเล็กลง */
+    }
+
+    .contact-card {
+        width: 100%;
+        /* ขยายให้เต็ม */
+        max-width: 300px;
+        /* ขีดจำกัดสูงสุด */
+    }
+
+    .phone-number,
+    .agency-name {
+        font-size: 1.2em;
+        /* ปรับขนาดเมื่อหน้าจอเล็กลง */
+    }
+
+    .name {
+        font-size: 0.75em;
+        /* ปรับขนาดเมื่อหน้าจอเล็กลง */
+    }
+
+    .call-button,
+    .close-button {
+        padding: 6px 12px;
+        /* ปรับขนาดเมื่อหน้าจอเล็กลง */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+        /* ปรับขนาดให้เล็กลงมาก */
+    }
+
+    .contact-card {
+        width: 90%;
+        /* ให้เต็มหน้าจอ */
+    }
+}
