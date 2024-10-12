@@ -105,7 +105,7 @@ h1::after {
 }
 
 .call-button {
-    padding: 10px ;
+    padding: 10px 8px;
     font-size: 1em;
     /* ขนาดเล็กลง */
     background-color: #1d3557;
@@ -168,14 +168,14 @@ h1::after {
     }
 
     .call-button{
-        padding: 5px ;
+        padding: 5px 8px;
         width: 100%;
         height: 200%;
         /* ปรับขนาดเมื่อหน้าจอเล็กลง */
     }
 
     .close-button {
-        padding: 5px ;
+        padding: 5px 0px;
         width: 20%;
         height: 250%;
         /* ปรับขนาดเมื่อหน้าจอเล็กลง */
