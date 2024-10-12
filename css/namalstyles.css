@@ -105,7 +105,7 @@ h1::after {
 }
 
 .call-button {
-    padding: px ;
+    padding: 10px ;
     font-size: 1em;
     /* ขนาดเล็กลง */
     background-color: #1d3557;
