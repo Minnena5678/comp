@@ -2,8 +2,6 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background: url('http://localhost/por/comp/im/12.jpg') no-repeat center center fixed;
-    background-size: cover;
     /* ปรับขนาดภาพให้เต็มหน้าจอ */
     text-align: center;
 }
@@ -23,7 +21,9 @@ h1 {
     text-align: center;
     color: #010911;
     margin: 20px;
-    font-size: 6vw;
+    margin-top: 45px;
+    font-size: 8vw;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     /* ใช้หน่วยที่ปรับตามขนาดหน้าจอ */
 }
 
@@ -32,7 +32,9 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     margin: 20px;
+    min-height: 65vh;
 }
 
 
